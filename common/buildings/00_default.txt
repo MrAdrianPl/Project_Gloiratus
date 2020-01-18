@@ -1,0 +1,252 @@
+﻿############################
+# Military Buildings
+############################
+military_building = {
+	local_manpower_modifier = 0.1
+
+	cost = 50
+	time = 180
+	
+	modification_display = {
+		0 = value_manpower
+	}
+}
+
+fortress_building = {
+	fort_level = 1
+	
+	cost = 50
+	time = 915
+	
+	
+	modification_display = {
+		0 = fort_level
+	}
+}
+
+barracks_building = {
+	local_defensive = 0.20
+	supply_limit_modifier = 0.20
+	cost = 50
+	time = 180
+	
+	
+	
+	modification_display = {
+		0 = local_defensive
+		1 = supply_limit_modifier
+	}
+}
+foundry_building = {
+	local_start_experience = 5
+	local_ship_recruit_speed = 0.1
+	local_cohort_recruit_speed = 0.1
+	cost = 50
+	time = 180
+	
+	
+	
+	modification_display = {
+		0 = local_start_experience
+		1 = local_ship_recruit_speed
+		2 = local_cohort_recruit_speed
+	}
+}
+
+##############################
+# Economical / Management
+##############################
+
+commerce_building = {
+	local_commerce_value_modifier = 0.33
+
+
+	cost = 50
+	time = 180
+	
+	
+	modification_display = {
+		0 = value_income
+	}
+}
+
+town_hall_building = {
+	local_tax_modifier = 0.1
+
+	cost = 50
+		time = 180
+
+	
+	
+	modification_display = {
+		0 = local_tax_modifier
+	}
+}
+
+court_building = {
+	city_monthly_state_loyalty  = 0.02
+	cost = 50
+	time = 180
+
+	
+	modification_display = {
+		0 = city_monthly_state_loyalty
+	}
+}
+
+academy_building = {
+	research_points_modifier = 0.025
+	local_pop_promotion_speed = 0.5
+	cost = 50
+	time = 180
+
+	
+	modification_display = {
+		0 = research_points_modifier
+		1 = local_pop_promotion_speed
+	}
+}
+
+temple_building = {
+	local_happiness_for_same_religion_modifier = 0.02
+	local_pop_conversion_speed = 2.5
+	cost = 50
+	time = 180
+
+	
+	
+	modification_display = {
+		0 = local_happiness_for_same_religion_modifier
+		1 = local_pop_conversion_speed
+	}
+}
+
+#################################
+# Population 
+################################
+
+population_building = {
+	local_population_capacity = 5
+	
+
+	cost = 50
+	time = 180
+
+	
+	modification_display = {
+		0 = value_population_capacity
+	}
+}
+
+library_building = {
+	local_citizen_happyness = 0.02
+	local_citizen_output = 0.02
+	cost = 50
+	time = 180
+	
+	
+	
+	modification_display = {
+		0 = local_citizen_happyness
+		1 = local_citizen_output
+	}
+}
+
+forum_building = {
+	local_freemen_happyness = 0.02
+	local_freemen_output = 0.02
+	
+	cost = 50
+	time = 180
+
+	
+	
+	modification_display = {
+		0 = local_freemen_happyness
+		1 = local_freemen_output
+	}
+}
+
+workshop_building = {
+	local_slaves_happyness = 0.02
+	local_slaves_output = 0.02
+	cost = 50
+	time = 180
+
+	
+	
+	modification_display = {
+		0 = local_slaves_happyness
+		1 = local_slaves_output
+	}
+}
+
+
+theathre_building = {
+	local_happiness_for_same_culture_modifier = 0.02
+	local_pop_assimilation_speed = 2.5
+	
+	cost = 50
+	time = 180
+
+	
+	
+	modification_display = {
+		0 = local_happiness_for_same_culture_modifier
+		1 = local_pop_assimilation_speed
+	}
+}
+
+aqueduct_building = {
+	local_population_growth = 0.01
+	local_migration_attraction = 0.5
+	cost = 50
+	time = 180
+
+	
+	
+	modification_display = {
+		0 = local_population_growth
+		1 = local_migration_attraction
+	}
+}
+###############
+#new buildings#
+###############
+##nobility##
+land_estate = {
+	local_population_growth = 0.01
+	local_serfs_output = 0.1
+	local_tnoble_happyness = 0.15
+
+
+	cost = 150
+	time = 300
+}
+taverns = {
+	local_serfs_happyness = 0.025
+	local_freemen_happyness = 0.025
+	local_commerce_value_modifier = 0.015
+	
+
+	cost = 75
+	time = 100
+}
+workshops = {
+	local_serfs_output = 0.1
+	local_freemen_output = 0.1
+	local_commerce_value_modifier = 0.1
+	
+	
+
+	cost = 150
+	time = 100
+}
+wizard_tower = {
+	local_country_civilization_value = 2
+	local_research_points_modifier = 0.1
+	local_tmages_output = 0.25
+
+	cost = 250
+	time = 100
+}

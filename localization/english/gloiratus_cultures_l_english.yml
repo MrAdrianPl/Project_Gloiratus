@@ -1,0 +1,42 @@
+﻿l_english:
+ #GROUPS
+ gellaiaus_group:1 "Geallian"
+ #Aserian
+ eagelian:1 "Eagelian"
+ weagelian:0 "Weagelian"
+ ytalian:0 "ytalian"
+ #Naming
+ gellaiaus_group_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ gellaiaus_group_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ ARMY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_gellaiaus_group:0 "$HOME$'s $NUM$$ORDER$ Company"
+ ARMY_NAME_intermarenican:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_intermarenican:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_intermarenican:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_norrfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_norrfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_norrfallian:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_werhenlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_werhenlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_werhenlander:0 "$HOME$'s $NUM$$ORDER$ Company"  
+ ARMY_NAME_northlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_northlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_northlander:0 "$HOME$'s $NUM$$ORDER$ Company"   
+ ARMY_NAME_errnorfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_errnorfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_errnorfallian:0 "$HOME$'s $NUM$$ORDER$ Company"    
+ 
+ #GROUPS
+ intermarenican:1 "Intermarenican"
+ #Aserian
+ intermarenican_1:1 "intermarenican_1"
+ intermarenican_2:0 "intermarenican_2"
+ intermarenican_3:0 "intermarenican_3"
+ intermarenican_4:0 "intermarenican_4" 
+ intermarenican_5:0 "intermarenican_5" 
+ intermarenican_6:0 "intermarenican_6" 
+ #Naming
+ intermarenican_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ intermarenican_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 

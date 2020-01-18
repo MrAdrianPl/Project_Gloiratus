@@ -1,0 +1,124 @@
+﻿l_english:
+ #GROUPS
+ werhenlander:1 "Werhenlander"
+ #Aserian
+ werhen:0 "Werhen"
+ north_werhen:0 "Northern Werhen"
+ luxter:0 "Luxter"
+ #Naming
+ werhenlander_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ werhenlander_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ ARMY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_gellaiaus_group:0 "$HOME$'s $NUM$$ORDER$ Company"
+ ARMY_NAME_intermarenican:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_intermarenican:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_intermarenican:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_norrfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_norrfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_norrfallian:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_werhenlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_werhenlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_werhenlander:0 "$HOME$'s $NUM$$ORDER$ Company"  
+ ARMY_NAME_northlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_northlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_northlander:0 "$HOME$'s $NUM$$ORDER$ Company"   
+ ARMY_NAME_errnorfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_errnorfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_errnorfallian:0 "$HOME$'s $NUM$$ORDER$ Company"    
+
+ #GROUPS
+ werhenssian:1 "Werhenssian"
+ #Aserian
+ werhenssian:0 "Werhenssian"
+ #Naming
+ werhenssian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ werhenssian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ #GROUPS
+ kinones:1 "Kinones"
+ #Aserian
+ kinones:0 "Kinone"
+ #Naming
+ kinones_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ kinones_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ #GROUPS
+ flusenlander:1 "Flusenlander"
+ #Aserian
+ flusenlander_1:0 "flusenlander_1"
+ flusenlander_2:0 "flusenlander_2"
+ flusenlander_3:0 "flusenlander_3"
+ flusenlander_4:0 "flusenlander_4"
+ #Naming
+ flusenlander_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ flusenlander_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ #GROUPS
+ errnorfallian:1 "Ernorrfalie"
+ #Aserian
+ errnorfallian_1:0 "errnorfallian_1"
+ errnorfallian_2:0 "errnorfallian_2"
+ errnorfallian_3:0 "errnorfallian_3"
+ #Naming
+ errnorfallian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ errnorfallian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"  
+ 
+ #GROUPS
+ northlander:1 "Northlander"
+ #Aserian
+ northlander:0 "Northlander"
+ #Naming
+ northlander_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ northlander_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"  
+ 
+ #GROUPS
+ polarian:1 "Polarian Islander"
+ #Aserian
+ polarian:0 "Polarian"
+ #Naming
+ polarian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ polarian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"  
+ 
+ #GROUPS
+ norrfallian:1 "Norrfalie"
+ #Aserian
+ norrfallian_1:0 "norrfallian_1"
+ norrfallian_2:0 "norrfallian_2" 
+ norrfallian_3:0 "norrfallian_3" 
+ norrfallian_4:0 "norrfallian_4" 
+ norrfallian_5:0 "norrfallian_5" 
+ #Naming
+ norrfallian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ norrfallian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

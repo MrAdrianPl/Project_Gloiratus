@@ -1,0 +1,61 @@
+﻿namespace = startup_choo
+
+startup_choo.1 = {
+	type = country_event
+	title = "startup_choo.1"
+	desc = "startup_choo.1"
+	picture = revolt
+	hidden = yes
+	
+	trigger = {
+	NOT = { has_variable = choo_startup_stuff_done }
+	}
+	immediate = {  
+	set_variable = choo_startup_stuff_done
+	set_variable = { name = society_points value = 0  }
+	set_variable = { name = society_development_level value = 1  }
+	
+	#assigning rank
+	if = { limit = { num_of_cities < 2 } 
+	set_variable = { name = current_state_rank value = 1  }
+	}
+	else_if = { limit = { num_of_provinces < 2 } 
+	set_variable = { name = current_state_rank value = 2  }
+	}
+	else_if = { limit = { num_of_provinces < 4 } 
+	set_variable = { name = current_state_rank value = 3  }
+	}
+	else_if = { limit = { num_of_provinces < 10 } 
+	set_variable = { name = current_state_rank value = 4  }
+	}
+	else = { set_variable = { name = current_state_rank value = 4  } }
+	
+	
+	
+	random_list = { 
+	20 = { set_variable = divide_and_conquer_destiny }
+	20 = { set_variable = rule_and_unite_destiny }
+	20 = { set_variable = expand_and_grow_destiny }
+	20 = { set_variable = be_welthy_and_prosper_destiny }
+	20 = { set_variable = discovery_wonders_of_world_destiny }
+	}
+	switch = { 
+	trigger = tag
+	ROM = { set_variable = balanced_nation_nature }
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	}
+
+	
+	
+}
+

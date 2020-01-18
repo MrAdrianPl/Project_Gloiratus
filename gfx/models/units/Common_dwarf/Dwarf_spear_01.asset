@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "Dwarf_spear_01_mesh"
+	file = "Dwarf_spear_01.mesh"
+
+	meshsettings = {
+		name = "jorodoxShape"
+		index = 0
+		texture_diffuse = "germanic_weapons_diffuse.dds"
+		texture_normal = "germanic_weapons_normal.dds"
+		texture_specular = "germanic_weapons_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "Dwarf_spear_01_entity"
+	pdxmesh = "Dwarf_spear_01_mesh"
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	

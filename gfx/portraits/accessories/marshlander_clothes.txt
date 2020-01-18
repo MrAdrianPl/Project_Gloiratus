@@ -1,0 +1,68 @@
+## Marshlander female clothes##
+
+female_clothes_marshlander_1 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = female_clothes_marshlander_1_entity }
+	set_tags = "full_bust"
+}
+
+female_clothes_marshlander_1_color2 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = female_clothes_marshlander_1_color2_entity }
+	set_tags = "full_bust"
+}
+
+female_clothes_marshlander_1_color3 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = female_clothes_marshlander_1_color3_entity }
+	set_tags = "full_bust"
+}
+
+female_clothes_marshlander_1_color4 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = female_clothes_marshlander_1_color4_entity }
+	set_tags = "full_bust"
+}
+
+## Marshlander male clothes##
+
+male_clothes_marshlander_1 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_1_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_1_color2 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_1_color2_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_1_color3 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_1_color3_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_1_color4 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_1_color4_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_2 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_2_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_2_color2 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_2_color2_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_2_color3 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_2_color3_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_2_color4 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_2_color4_entity }
+	set_tags = "full_bust"
+}
+
+male_clothes_marshlander_2_color5 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_clothes_marshlander_2_color5_entity }
+	set_tags = "full_bust"
+}

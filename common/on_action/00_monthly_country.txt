@@ -1,0 +1,36 @@
+﻿monthly_country_pulse = {
+	
+
+
+
+	events = {
+
+	#governments mechanics
+	society_choo.2
+	society_choo.3
+	society_choo.4
+	society_choo.5
+	society_choo.8
+	society_choo.9
+	deva_and_pros.1
+	deva_and_pros.2
+	deva_and_pros.3
+	#check do country have proper variables
+	startup_choo.2
+	#razani civil war ender
+	razani_civil_war.5
+	}
+	
+	random_events = {
+		595 = 0
+
+	}
+	
+	on_actions = {
+
+	
+	
+	
+
+	}
+}

@@ -1,0 +1,9 @@
+object={
+	name="amb_3D_river_emitter"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="Audio_layer"
+	entity="map_ambient_3D_river"
+	count=0
+}

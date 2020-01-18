@@ -1,0 +1,47 @@
+﻿selaskusian = {
+	color = rgb { 165 10 75 }
+	male_names = {
+			Cagri Caka Afsin Aksonqor Alkan Alp Yurek Alptigin Artuk Ayaz Aydin 
+			Aydogan Aydogdu Aytekin Boru Bulend Bahadir Balaban Basbuga Batuhan Baturay Baybars Bayezid Baytas Belek Berkan 
+			Berkiyaruk Bozan Bugra Burak Cuneyd Dundar Danismend Demir Dogan Dogukan Dukak Erdem Ertan Ertekin Ertugrul 
+			Gunduz Hizir Ilgazi Inal Kurboga Kaikaus Kaikhusraw Kaiqobad Karatay Kasim 
+			Kaytun Kemal Kilic Korkut Kutalmis Kutay Kutlug Mursel Meliksah Mengucek  
+		    Orhan Porsuk Rustem Ridvan Sobuk Sokmen Sonmez Saim Saltuk Saruca Savtekin Savur 
+			Selcuk Sencer Sinan Tanrivermis Tekin Timurtas Togay Togtekin Toktamis Tolun Toruntay Tugrul Tunga Turgut 
+			Turhan Tutus Uluc Umur Yakut Yaman Yinal
+	}
+	female_names = {
+		    Cilen Ciltanesi Ozgul Ozlem Akgul Asli Ayasun Ayten Bozcin Dilek Esin 
+            Gulcicek Gulay Gunduz Gundes Gunes Ilkay Ipek Ipekel Irge Karacik Mala Mutlu Peksen 
+            Samur Sarica Sati Sevilay Sevindik Sibel Sirin Sirma Songul Tekce Tura Umay Usunbike 
+            Yasar Yeldem Yildiz
+	}
+	family = {
+		Aysun.Dincer.Tayyar.Gulpinar
+		Icten.Orbay.Niyazi.Iscan
+		Aladogan.Saban.Dagarices.Dagaricid
+		Iskender.Kozen.Genc.Sokullu
+		Yaser.Ceylan.Geroldes.Sahan
+		Onay.Ozbilgin.Cicek.Aytac
+		Uzer.Yigit.Akkaya.Aykut
+		Toydemir.Aydogdu.Buruk.Mutlu
+		Ogut.Gokmen.Esra.Baydar
+		Akcam.Dogan.Birol.Ocal
+		Ayturk.Karaca.Rigleikes.Gulden
+	}
+	culture = {
+		selaskusian_1 = {}
+		selaskusian_2 = {}
+		selaskusian_3 = {}
+		selaskusian_4 = {}
+		selaskusian_5 = {}
+
+	}
+	barbarian_names = { WERHENLAND LUXTERREICH ARALANS }
+	
+	graphical_culture = great_steppes_gfx
+	ethnicities = {
+		10 = selaskusian
+	}
+}
+	

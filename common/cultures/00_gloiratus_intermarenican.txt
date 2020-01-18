@@ -1,0 +1,49 @@
+﻿intermarenican = {
+	color = rgb { 122 235 128 }
+	male_names = {
+        Andinos Andios Anneses Annos Aplis Aploudos Aplos Apouros Baidaros Baizo Baizos Baolios Bardourios Bato Byoukos Byousas Bizo Bryoukos Karrios Daiekos Daitor Dasantos Dasios Dazomenos Dazos Epikaris Iettos Implaios Laidikalios Laidietis Laidos Labios Ledros Massurios Messios Messor Paio Panentios Panes Panto Pantos Plannios Plares Prorados Sarnos Skenobarbos Sestos Statanios Statikos Statos Souttis Temaios Tizios Tritonos Tritos Turelios Ulkidios Baranos Baridios Bendo Bepos Berzoulos
+        Karbanios Germanos Labianos Pinsos Pladomenos Verzaieos # Of Dalmatian origin
+        Anadros Bouzetios Ditos Loantios Pantadienos Plator Platourios Rufantius Sestenius Stennas Vendes # Used among the Japodes
+        Tourranios Tourrinios Touros # Used among the Japodes; of Liburnian origin
+        Andes Iaritos Montanos Parmanicos Sarios Seneka Silos Sinos # Used among the Japodes; probably of Celtic origin
+        Blaidaros Dasmenos Lensos Sassaios Skilos Sourko # Used among the Breuci
+        Kralos Liros Passalos Likkaios # Used among the Colapiani
+        Skenos # Used among the Jasi
+	}
+	female_names = {
+		Ada Aigyptia Anthis Antigona Antigone Aphrodisia Archestrate Archilla Archippe Aristagora 
+		Ariste Aristion Aristo Aristoboule Aristodike Aristokleia Aristokrateia Aristomache 
+		Aristonike Aristylla Artemis Aspasia Beroaia Biote Boidion Chairestrate Chairippe Choirine 
+		Chrysilla Chrysis Deidamia Demokrateia Demostrate Diokleia Doris Dorkas Eukleia Eukoline Euphrosyne 
+		Euporia Eutychis Glykera Hedeia Hediste Hedyle Hedyline Herais Hiero Hierokleia Hippostrate 
+		Homolois Kadmeia Kallimache Kallippe Kallis Kallistion Kallisto Kallistomache Kallistrate Kleagora 
+		Kleariste Kleino Kleito Kleo Kleopatra Kleostrate Krateia Laodike Leaina Leontis Lysimache 
+		Lysistrate Malthake Mania Melissa Melitta Menestrate Meniske Metrodora Mika Mnesarete Mnesistrate 
+		Murrhine Nausistrate Nikagora Nikaia Nikareta Nikarete Nikeso Niko Nikomache Nikostrate Olympias
+		Pamphile Parthenis Patrokleia Phanagora Phano Phanostrate Philainis Phileia Philias Philinna Philippa 
+		Philista Phillo Philokleia Philostrate Philotera Philotis Philoumene Philoxena Plangon Plathane Pythias 
+		Rhode Satyra Sima Simale Simon Sostrate Syra Theano Theodora Theodote Thessalonike Thraitta Timagora Timarete Timokleia 
+		Timostrate Troias Xeno Xenokrateia Zopyra Zopyris
+	}
+	family = {
+		Agathoklid Alketid Apollonid Aratid Helladid Omirid Peithid Peneid Philonid Proktid Pytheid Sosiklid Tauromeneid 
+		Therid Theronid Timolid Xenonid Zagreid Zosimid Zotikid Pelopid Philetid Proteid Zenonid Sostratid Tauriskid Sosthenid Pyhrrid Leonidid Killistratid 
+		Nikoklid Pantauchid Leukonid Onomastid Kephistodid Karsid Nikokrid Persid Hippostratid Epandrid Gylippid Helenid Megalid Charinid Dydid Dionid Hiketasid 
+		Stratoklid Spartokid Stratonikid Taurid Timaid Timarchid Timoleid Timotheid Tryphid Xanthippid Xenarid Xenokratid Xenophid Zenid 
+	}
+	culture = {
+		intermarenican_1 = {}
+		intermarenican_2 = {}
+		intermarenican_3 = {}
+		intermarenican_4 = {}
+		intermarenican_5 = {}
+		intermarenican_6 = {}
+	}
+	barbarian_names = { AESTRAEI AGRIANES DERRONES DOBERES LAIAIOUS MYGDONES ODOMANTI PAIOPLAI SIRIOPAIONES TRIBALLI }
+	
+	graphical_culture = phanician_gfx
+	ethnicities = {
+		10 = gellaian
+	}
+}
+	

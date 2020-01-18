@@ -1,0 +1,32 @@
+﻿gellaiaus_group = {
+	
+	color = rgb { 255 0 0 }
+
+	male_names = {
+		Zan Totn Denr Obennan Ontune Rum Sertem Tadm Urud Unr Ursesep Ern Saraden Uzn Bod Borte Dasdunn Bonpr Sran Ozam
+		Pepu srurram Danduen romtunre tbunnzezoronn amptan zenn Eazbem Rzamu Senzsen Rpadazonnsru Tsunsomton Udtamzoe
+		Penntu Ruunnsom Tsampu Pedentruztu Edorun Ubenn Turem Bterenntonn Enzen
+	}
+	female_names = {
+		Zan Totn Poet Denr Ontune Nna Rum Sertem Tadm Ara Urud Unr Ran Ern Saraden Uzn Bod Borte Dasdunn Bonpr Sran 
+		Benben tamran bunbte punnrazen Penn tersonrbu Tron ttunnzde dunnpden sussu zemen Zrann bpanntsa ppesape Sobun
+		rsannonsro Dapau
+	}
+	family = {
+		Zan Totn Poet Denr Obennan Ontune Nna Rum Sertem Tadm Ara Urud Unr Ran Ursesep Ern Saraden Uzn Bod Borte Dasdunn Bonpr Sran Ozam
+		Emumtzenze Sdemssann Todun Tum sunnonn Danduen pumu tbunnzezoronn amptan bzerennstempde
+	}
+	
+	culture = {
+		eagelian = {}
+		weagelian  = {}
+		ytalian = {}
+	}
+	
+	barbarian_names = { GELLAIAUS EAGELIA WEAGELIA YTALIA }
+	
+	graphical_culture = roman_gfx
+	ethnicities = {
+		10 = gellaian
+	}
+}

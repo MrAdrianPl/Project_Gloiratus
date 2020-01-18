@@ -1,0 +1,59 @@
+﻿l_english:
+ #GROUPS
+ zinduidian:1 "Karksm"
+ #Aserian
+ zinduidian_1:0 "zinduidian_1"
+ zinduidian_2:0 "zinduidian_2"
+ zinduidian_3:0 "zinduidian_3"
+ zinduidian_4:0 "zinduidian_4"
+ zinduidian_5:0 "zinduidian_5"
+ #Naming
+ zinduidian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ zinduidian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ ARMY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_gellaiaus_group:0 "$HOME$'s $NUM$$ORDER$ Company"
+ ARMY_NAME_intermarenican:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_intermarenican:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_intermarenican:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_norrfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_norrfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_norrfallian:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_werhenlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_werhenlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_werhenlander:0 "$HOME$'s $NUM$$ORDER$ Company"  
+ ARMY_NAME_northlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_northlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_northlander:0 "$HOME$'s $NUM$$ORDER$ Company"   
+ ARMY_NAME_errnorfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_errnorfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_errnorfallian:0 "$HOME$'s $NUM$$ORDER$ Company"    
+
+ #GROUPS
+ etaredican:1 "Bhaχnmrečtem"
+ #Aserian
+ etaredican_1:0 "etaredican_1"
+ etaredican_2:0 "etaredican_2"
+ etaredican_3:0 "etaredican_3"
+ #Naming
+ etaredican_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ etaredican_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ 
+ #GROUPS
+ esquelian:1 "Esquelian"
+ #Aserian
+ esquelian_1:0 "esquelian_1"
+ esquelian_2:0 "esquelian_2"
+ #Naming
+ esquelian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ esquelian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ #GROUPS
+ phanician:1 "Phanician"
+ #Aserian
+ phanician:0 "Phanician"
+ #Naming
+ phanician_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ phanician_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"  

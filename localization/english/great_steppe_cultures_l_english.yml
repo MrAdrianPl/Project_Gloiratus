@@ -1,0 +1,93 @@
+﻿l_english:
+ #GROUPS
+ selaskusian:1 "selaskusian"
+ #Aserian
+ selaskusian_1:0 "selaskusian_1"
+ selaskusian_2:0 "selaskusian_2"
+ selaskusian_3:0 "selaskusian_3"
+ selaskusian_4:0 "selaskusian_4"
+ selaskusian_5:0 "selaskusian_5"
+ #Naming
+ selaskusian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ selaskusian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ ARMY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_gellaiaus_group:0 "$HOME$'s $NUM$$ORDER$ Company"
+ ARMY_NAME_intermarenican:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_intermarenican:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_intermarenican:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_norrfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_norrfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_norrfallian:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_werhenlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_werhenlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_werhenlander:0 "$HOME$'s $NUM$$ORDER$ Company"  
+ ARMY_NAME_northlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_northlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_northlander:0 "$HOME$'s $NUM$$ORDER$ Company"   
+ ARMY_NAME_errnorfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_errnorfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_errnorfallian:0 "$HOME$'s $NUM$$ORDER$ Company"    
+
+ #GROUPS
+ alaguric:1 "Alani-Ularic"
+ #Aserian
+ alaguric_1:0 "alaguric_1"
+ alaguric_2:0 "alaguric_2"
+ alaguric_3:0 "alaguric_3"
+ alaguric_4:0 "alaguric_4"
+ #Naming
+ alaguric_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ alaguric_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ #GROUPS
+ hazalars:1 "Hazalars"
+ #Aserian
+ hazalars_1:0 "Xazalars"
+ hazalars_2:0 "Kerkind"
+ #Naming
+ hazalars_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ hazalars_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ #GROUPS
+ dragkhanic:1 "Dunydurceg"
+ #Aserian
+ dragkhanic_1:0 "Soveneria"
+ dragkhanic_2:0 "dragkhanic_2"
+ dragkhanic_3:0 "dragkhanic_3"
+ dragkhanic_4:0 "dragkhanic_4"
+ dragkhanic_5:0 "dragkhanic_5" 
+ dragkhanic_6:0 "Goklakr"  
+ dragkhanic_7:0 "dragkhanic_7" 
+ jarenam:0 "Jarenam" 
+ #Naming
+ dragkhanic_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ dragkhanic_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+
+ #GROUPS
+ zarakens:1 "Zarakens"
+ #Aserian
+ zaraken_1:0 "Zakaren"
+ zaraken_1:0 "zaraken_2"  
+ #Naming
+ zarakens_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ zarakens_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+
+ #GROUPS
+ gold_dwarves:1 "Golden Dwarves"
+ #Aserian
+ gold_dwarven_1:0 "gold_dwarven_1"
+ gold_dwarven_2:0 "gold_dwarven_2"  
+ gold_dwarven_3:0 "gold_dwarven_3"  
+ gold_dwarven_4:0 "gold_dwarven_4"  
+ #Naming
+ gold_dwarves_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ gold_dwarves_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+
+
+
+
+
+
+ 

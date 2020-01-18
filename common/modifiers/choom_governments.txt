@@ -1,0 +1,12 @@
+﻿#nomadic
+
+choo_nomadic_authority_0 = { monthly_character_loyalty = -0.250 start_migration_cost_modifier = 0.250  }
+choo_nomadic_authority_1 = { monthly_character_loyalty = -0.200 start_migration_cost_modifier = 0.150  }
+choo_nomadic_authority_2 = { monthly_character_loyalty = -0.150 start_migration_cost_modifier = 0.125  }
+choo_nomadic_authority_3 = { monthly_character_loyalty = -0.100 start_migration_cost_modifier = 0.075  }
+choo_nomadic_authority_4 = { monthly_character_loyalty = -0.050 start_migration_cost_modifier = 0.050  }
+choo_nomadic_authority_5 = { monthly_character_loyalty = 0.025  start_migration_cost_modifier = -0.100 }
+choo_nomadic_authority_6 = { monthly_character_loyalty = 0.050  start_migration_cost_modifier = -0.175 }
+choo_nomadic_authority_7 = { monthly_character_loyalty = 0.075  start_migration_cost_modifier = -0.250 }
+choo_nomadic_authority_8 = { monthly_character_loyalty = 0.100  start_migration_cost_modifier = -0.375 }
+choo_nomadic_authority_9 = { monthly_character_loyalty = 0.125  start_migration_cost_modifier = -0.500 }

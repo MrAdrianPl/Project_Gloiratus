@@ -1,0 +1,35 @@
+﻿yearly_country_pulse =
+{
+	on_actions = {
+
+	}
+	
+	effect = {
+		
+		if = {
+		limit = {  government = merchant_republic  }
+		if = { limit = { has_variable = 5_years_pulse_election_timer } change_variable = { name = 5_years_pulse_election_timer add = 1 } }
+		else = { set_variable = { name = 5_years_pulse_election_timer value = 1 } }
+		
+		if = { limit = { var:5_years_pulse_election_timer >= 5 } trigger_event = { id = merchant_republic_events.1 } set_variable = { name = 5_years_pulse_election_timer value = 0 } }
+		}
+		
+	}
+	
+	random_events =
+	{
+		110 = 0
+	}
+	events = {
+	#wheel of society
+	choo_ai_actions_performing.1
+	choo_imperial.2
+	choo_imperial.3
+	choo_imperial.4
+	society_choo.1
+	parliment_events.1
+	parliment_events.3
+	parliment_events.4
+	parliment_events.7
+	}
+}

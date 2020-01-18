@@ -1,0 +1,32 @@
+country = {
+	countries = {
+		ZAK = {
+			governorship = {
+				region = "zainddian_sttepes"
+				governor = 23
+			}
+			governorship = {
+				region = "bronze_foothils"
+				governor = 32
+			}			
+		}
+	}
+}
+
+
+jobs = {
+	province_job={
+		who=ZAK
+		character=23
+		start_date=450.10.1
+		governorship="zainddian_sttepes"
+	}
+	province_job={
+		who=ZAK
+		character=32
+		start_date=450.10.1
+		governorship="bronze_foothils"
+	}	
+}
+
+

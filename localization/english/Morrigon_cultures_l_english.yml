@@ -1,0 +1,105 @@
+﻿l_english:
+ #GROUPS
+ zani_vetalian:1 "Zanazi-Vetali"
+ #Aserian
+ zani_vetalian_1:0 "Rhufeinig"
+ zani_vetalian_2:0 "zani_vetalian_2"
+ zani_vetalian_3:0 "zani_vetalian_3"
+ zani_vetalian_4:0 "Brezhoneg"
+ zani_seeker:0 "Seeker" 
+ #Naming
+ zani_vetalian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ zani_vetalian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ ARMY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_gellaiaus_group:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_gellaiaus_group:0 "$HOME$'s $NUM$$ORDER$ Company"
+ ARMY_NAME_intermarenican:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_intermarenican:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_intermarenican:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_norrfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_norrfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_norrfallian:0 "$HOME$'s $NUM$$ORDER$ Company" 
+ ARMY_NAME_werhenlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_werhenlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_werhenlander:0 "$HOME$'s $NUM$$ORDER$ Company"  
+ ARMY_NAME_northlander:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_northlander:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_northlander:0 "$HOME$'s $NUM$$ORDER$ Company"   
+ ARMY_NAME_errnorfallian:0 "$NUM$$ORDER$ Army"
+ NAVY_NAME_errnorfallian:0 "$NUM$$ORDER$ Navy"
+ COHORT_NAME_errnorfallian:0 "$HOME$'s $NUM$$ORDER$ Company"    
+
+ #GROUPS
+ vetalian:1 "Morrigon Vetalian"
+ #Aserian
+ vetalian_1:0 "vetalian_1"
+ vetalian_2:0 "vetalian_2"
+ vetalian_3:0 "vetalian_3"
+ vetalian_4:0 "vetalian_4"
+ vetalian_5:0 "vetalian_5" 
+ vetalian_6:0 "vetalian_6" 
+ #Naming
+ vetalian_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ vetalian_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"
+ 
+ 
+ #GROUPS
+ celtican:1 "Morrigon Celtican"
+ #Aserian
+ celtican_1:0 "celtican_1"
+ celtican_2:0 "celtican_2"
+ celtican_3:0 "celtican_3"
+ celtican_4:0 "celtican_4"
+ celtican_5:0 "celtican_5" 
+ #Naming
+ celtican_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ celtican_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ 
+ #GROUPS
+ rohenoan:1 "Rohenoan"
+ #Aserian
+ rohenoan_1:0 "rohenoan_1"
+ rohenoan_2:0 "rohenoan_2"
+ rohenoan_3:0 "rohenoan_3"
+ #Naming
+ rohenoan_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ rohenoan_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ #GROUPS
+ borderlander:1 "Borderlander"
+ #Aserian
+ borderlander_1:0 "borderlander_1"
+ borderlander_2:0 "borderlander_2"
+ borderlander_3:0 "borderlander_3"
+ marshlander:0 "marshlander" 
+ #Naming
+ borderlander_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ borderlander_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"   
+ 
+ #GROUPS
+ aralans:1 "Aralans"
+ #Aserian
+ aralan:0 "Aralan"
+ aralan_2:0 "Bourges"
+ aralan_3:0 "Poitier"
+ caerthwaite:0 "Caerthwaite"
+ selewine:0 "Selewine" 
+ #Naming
+ aralans_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ aralans_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$" 
+ 
+ #GROUPS
+ aralan_rohenoan:1 "Aralan-Rohenoan"
+ #Aserian
+ aralan_rohenoan:0 "Aralan-Rohenoan"
+ #Naming
+ aralan_rohenoan_malename:0 "$NAME_MALE$ $REGNALNUMBER$ $FAMILY_MALE$ $NICKNAME$"
+ aralan_rohenoan_femalename:0 "$NAME_FEMALE$ $REGNALNUMBER$ $FAMILY_MALE$"  
+ 
+ 
+ 
+ 
+ 
+ 

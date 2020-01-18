@@ -1,0 +1,45 @@
+##############################################################################
+#####                    Baetep upgrade clones                       #####
+##############################################################################
+
+##################################
+# Baetep lower
+##################################
+entity = {
+	name = "baetep_lower_gfx_light_infantry"
+	clone = "EGY_light_infantry"
+}
+
+entity = {
+	name = "baetep_lower_gfx_archers"
+	clone = "EGY_archers"
+}
+
+entity = {
+	name = "baetep_lower_gfx_camels"
+	clone = "EGY_archers"
+}
+
+entity = {
+	name = "baetep_lower_gfx_horse_archers"
+	clone = "EGY_archers"
+}
+
+entity = {
+	name = "baetep_lower_gfx_heavy_infantry"
+	clone = "EGY_heavy_infantry"
+}
+
+entity = {
+	name = "baetep_lower_gfx_chariots"
+	clone = "EGY_heavy_infantry"
+}
+
+entity = {
+	name = "baetep_lower_gfx_heavy_cavalry"
+	clone = "EGY_heavy_cavalry"
+}
+entity = {
+	name = "baetep_lower_gfx_light_cavalry"
+	clone = "EGY_heavy_cavalry"
+}

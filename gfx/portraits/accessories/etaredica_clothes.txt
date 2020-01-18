@@ -1,0 +1,99 @@
+## Etaredica female clothes##
+
+
+
+## Etaredica male clothes##
+
+male_hat_zainuddian_1 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_hat_zainuddian_1_entity }
+}
+male_hat_zainuddian_1_color2 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_hat_zainuddian_1_color2_entity }
+}
+male_hat_zainuddian_1_color3 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_hat_zainuddian_1_color3_entity }
+}
+male_hat_zainuddian_1_color4 = {
+	entity = { required_tags = ""		node = shared_pose_entity		entity = male_hat_zainuddian_1_color4_entity }
+}
+
+
+## Etaredica male Hairstyles##
+
+
+## Etaredica female Hairstyles##
+
+
+
+## Etaredica Headgear###
+
+female_headgear_zainuddian_1 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_1_entity" }
+	
+}
+female_headgear_zainuddian_1_color2 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_1_color2_entity" }
+	
+}
+female_headgear_zainuddian_1_color3 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_1_color3_entity" }
+	
+}
+female_headgear_zainuddian_1_color4 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_1_color4_entity" }
+	
+}
+
+
+female_headgear_zainuddian_2 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_2_entity" }
+	
+}
+female_headgear_zainuddian_2_color2 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_2_color2_entity" }
+	
+}
+female_headgear_zainuddian_2_color3 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_2_color3_entity" }
+	
+}
+female_headgear_zainuddian_2_color4 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_2_color4_entity" }
+	
+}
+
+female_headgear_zainuddian_3 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_3_entity" }
+	
+}
+female_headgear_zainuddian_3_color2 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_3_color2_entity" }
+	
+}
+female_headgear_zainuddian_3_color3 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_3_color3_entity" }
+	
+}
+female_headgear_zainuddian_3_color4 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "female_headgear_zainuddian_3_color4_entity" }
+	
+}
+
+zainuddian_helmet_1 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "zainuddian_helmet_01_p_entity" }
+	
+}
+zainuddian_helmet_1_color2 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "zainuddian_helmet_01_p_color2_entity" }
+	
+}
+zainuddian_helmet_1_color3 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "zainuddian_helmet_01_p_color3_entity" }
+	
+}
+zainuddian_helmet_1_color4 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "zainuddian_helmet_01_p_color4_entity" }
+	
+}
+
+

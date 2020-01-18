@@ -1,0 +1,44 @@
+##############################################################################
+#####                    Duny upgrade clones                             #####
+##############################################################################
+
+# GT2  
+entity = {
+	name = "GT2_light_infantry"
+	clone = "DNY_light_infantry"
+}
+
+entity = {
+	name = "GT2_archers"
+	clone = "DNY_light_infantry"
+}
+
+entity = {
+	name = "GT2_camels"
+	clone = "DNY_light_infantry"
+}
+
+entity = {
+	name = "GT2_horse_archers"
+	clone = "DNY_light_infantry"
+}
+
+entity = {
+	name = "GT2_heavy_infantry"
+	clone = "DNY_heavy_infantry"
+}
+
+entity = {
+	name = "GT2_chariots"
+	clone = "DNY_heavy_infantry"
+}
+
+entity = {
+	name = "GT2_heavy_cavalry"
+	clone = "DNY_heavy_infantry"
+}
+entity = {
+	name = "GT2_light_cavalry"
+	clone = "DNY_heavy_infantry"
+}
+

@@ -1,0 +1,271 @@
+EGA = {
+	color1 = rgb { 139 16 13 }
+	color2 = rgb { 255 223 0 }
+	textured_emblem = {
+		texture = "Gellaiaus_Empire.png"
+	}
+}
+EGY = {
+	color1 = rgb { 0 202 255 }
+	color2 = rgb { 255 188 84 }
+	textured_emblem = {
+		texture = "Baetep.png"
+	}
+}
+HAZ = {
+	color1 = rgb { 1 81 151 }
+	color2 = rgb { 207 20 43 }
+	textured_emblem = {
+		texture = "Hazarlar.png"
+	}
+}
+ARL = {
+	color1 = rgb { 24 71 53 }
+	color2 = rgb { 213 182 98 }
+	textured_emblem = {
+		texture = "Aralans.png"
+	}
+}
+LNG = {
+	color1 = rgb { 255 204 51 }
+	color2 = rgb { 213 9 34 }
+	textured_emblem = {
+		texture = "Union_of_Luxtereich.png"
+	}
+}
+SOV = {
+	color1 = rgb { 255 255 255 }
+	color2 = rgb { 189 4 4 }
+	textured_emblem = {
+		texture = "Soventeir_Empire.png"
+	}
+}
+JRE = {
+	color1 = rgb { 154 154 154 }
+	color2 = rgb { 0 0 0 }
+	textured_emblem = {
+		texture = "Jarenam_Empire.png"
+	}
+}
+ZAK = {
+	color1 = rgb { 238 11 39 }
+	color2 = rgb { 246 174 0 }
+	textured_emblem = {
+		texture = "Zarakens.png"
+	}
+}
+ZAE_FLAG = {
+	color1 = rgb { 9 15 86 }
+	color2 = rgb { 254 0 0 }
+	textured_emblem = {
+		texture = "Zaraken_Empire.png"
+	}
+}
+WGA = {
+	color1 = rgb { 160 0 0 }
+	color2 = rgb { 249 196 32 }
+	textured_emblem = {
+		texture = "Wegallia_Empire.png"
+	}
+}
+BRE = {
+	color1 = rgb { 209 29 28 }
+	color2 = rgb { 0 39 129 }
+	textured_emblem = {
+		texture = "Bretagne.png"
+	}
+}
+PHK = {
+	color1 = rgb { 206 205 173 }
+	color2 = rgb { 30 86 46 }
+	textured_emblem = {
+		texture = "Phanicia_Kingdom.png"
+	}
+}
+DUN = {
+	color1 = rgb { 241 189 24 }
+	color2 = rgb { 8 62 81 }
+	textured_emblem = {
+		texture = "Kingdom_Dune.png"
+	}
+}
+AGE = {
+	color1 = rgb { 65 164 174 }
+	color2 = rgb { 48 141 87 }
+	textured_emblem = {
+		texture = "Agaetep.png"
+	}
+}
+PTH = {
+	color1 = rgb { 201 81 49 }
+	color2 = rgb { 48 141 87 }
+	textured_emblem = {
+		texture = "Ptahemkhia.png"
+	}
+}
+KAF = {
+	color1 = rgb { 175 0 0 }
+	color2 = rgb { 227 221 209 }
+	textured_emblem = {
+		texture = "Kaffira.png"
+	}
+}
+VGK = {
+	color1 = rgb { 255 178 0 }
+	color2 = rgb { 175 0 0 }
+	textured_emblem = {
+		texture = "Vizdngoklakr.png"
+	}
+}
+UCT = {
+	color1 = rgb { 192 12 14 }
+	color2 = rgb { 205 191 137 }
+	textured_emblem = {
+		texture = "Uchiktudun_tukin.png"
+	}
+}
+AKS = {
+	color1 = rgb { 255 0 0 }
+	color2 = rgb { 215 215 215 }
+	textured_emblem = {
+		texture = "Aksaklakr.png"
+	}
+}
+TRH = {
+	color1 = rgb { 37 53 76 }
+	color2 = rgb { 205 191 137 }
+	textured_emblem = {
+		texture = "Trhnadunya.png"
+	}
+}
+DNY = {
+	color1 = rgb { 0 45 91 }
+	color2 = rgb { 242 230 96 }
+	textured_emblem = {
+		texture = "Duny.png"
+	}
+}
+OKC = {
+	color1 = rgb { 226 176 38 }
+	color2 = rgb { 90 126 82 }
+	textured_emblem = {
+		texture = "Okonci.png"
+	}
+}
+AVI = {
+	color1 = rgb { 223 148 0 }
+	color2 = rgb { 255 4 0 }
+	textured_emblem = {
+		texture = "Avit.png"
+	}
+}
+DKK = {
+	color1 = rgb { 195 195 195 }
+	color2 = rgb { 0 91 161 }
+	textured_emblem = {
+		texture = "Du_Kerkind.png"
+	}
+}
+ATH = {
+	color1 = rgb { 181 49 49 }
+	color2 = rgb { 181 134 33 }
+	textured_emblem = {
+		texture = "Atheus.png"
+	}
+}
+IT8 = {
+	color1 = rgb { 198 0 0 }
+	color2 = rgb { 255 255 255 }
+	textured_emblem = {
+		texture = "Zewggad.png"
+	}
+}
+NAR_FLAG = {
+	color1 = rgb { 25 58 114 }
+	color2 = rgb { 242 188 81 }
+	textured_emblem = {
+		texture = "Nouveau_Aralan.png"
+	}
+}
+EGL = {
+	color1 = rgb { 150 15 11 }
+	color2 = rgb { 204 148 2 }
+	textured_emblem = {
+		texture = "Gellaiaus_loyalist.png"
+	}
+}
+GAR = {
+	color1 = rgb { 43 78 132 }
+	color2 = rgb { 223 168 75 }
+	textured_emblem = {
+		texture = "Gellaiaus_heveliuan.png"
+	}
+}
+NGA = {
+	color1 = rgb { 226 0 0 }
+	color2 = rgb { 219 145 36 }
+	textured_emblem = {
+		texture = "Wegallia_supporters.png"
+	}
+}
+YGA = {
+	color1 = rgb { 53 132 25 }
+	color2 = rgb { 219 145 36 }
+	textured_emblem = {
+		texture = "Ylatia.png"
+	}
+}
+IP7 = {
+	color1 = rgb { 219 145 36 }
+	color2 = rgb { 255 239 105 }
+	textured_emblem = {
+		texture = "Teldranin.png"
+	}
+}
+SK1 = {
+	color1 = rgb { 225 136 76 }
+	color2 = rgb { 4 4 6 }
+	textured_emblem = {
+		texture = "Seeker_order.png"
+	}
+}
+CTW = {
+	color1 = rgb { 0 85 176 }
+	color2 = rgb { 202 135 56 }
+	textured_emblem = {
+		texture = "Caerthwaite.png"
+	}
+}
+NR9 = {
+	color1 = rgb { 0 114 197 }
+	color2 = rgb { 249 248 249 }
+	textured_emblem = {
+		texture = "Selewine.png"
+	}
+}
+SK2 = {
+	color1 = rgb { 4 4 6 }
+	color2 = rgb { 225 136 76 }
+	textured_emblem = {
+		texture = "Seeker_order_2.png"
+	}
+}
+MH1 = {
+	color1 = rgb { 185 18 27 }
+	color2 = rgb { 249 248 249 }
+	textured_emblem = {
+		texture = "Myahudya.png"
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

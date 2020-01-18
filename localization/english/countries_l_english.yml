@@ -1,0 +1,220 @@
+﻿l_english:
+ ######COUNTRIES######:0 ""
+ REB:0 "Rebels"
+ REB_ADJ:0 "Rebel"
+ BAR:0 "Barbarians"
+ BAR_ADJ:0 "Barbarian"
+ MER:0 "Mercenaries"
+ MER_ADJ:0 "Mercenary"
+ #:0 ""
+ # Barbarian Names below..:0 ""
+ #:0 ""
+ # GERMANIC:0 ""
+ #:0 ""
+ NT9:0 "Juoláaschna" 
+ WH7:0 "Jolanáland"
+ WH1:0 "Eulenberg"
+ WH4:0 "Flevium"
+ WH2:0 "Aregelia"
+ PW3:0 "Olbia"
+ ARL:0 "Aralans"
+ ARS:0 "Artois"
+ #Zani
+ EGA:0 "Razani Empire"
+ EGY:0 "Kingdom of Baetep"
+ WGA:0 "Nazani Empire"
+ PHK:0 "Phanicia Kingdom"
+ BRE:0 "Bretagne"
+ AQT:0 "Aquitània"
+ GAR:0 "Gellaiaus Heveliuan"
+ EGL:0 "Gellaiaus Loyalist"
+ NGA:0 "Nazani Supporters" 
+ YGA:0 "Ylatia"
+ IP7:0 "Teldranin" 
+ #Baetep
+ DUN:0 "Kindom of Dune"
+ AGE:0 "Agaetep"
+ PTH:0 "Ptahemkhia"
+ AKH:0 "Akhekh"
+ #Golden Dwarves
+ BEL:0 "Bel-bani"
+ SNP:0 "Sardanapalus"
+ PIL:0 "Pileser"
+ KDM:0 "Kadashman"
+ NEB:0 "Nebo"
+ LRS:0 "Larsa"
+ AKK:0 "Akkad"
+ URU:0 "Uruk"
+ YMH:0 "Yamhad"
+ KAS:0 "The Kassinians"
+ BNR:0 "Burnaburiash"
+#Dunydurceg
+ JRE:0 "Jarenam Empire"
+ SOV:0 "Soventeir Empire"
+ KAF:0 "Kaffira kingdom" 
+#Great Steppes
+ ZAK:0 "The Zarakens"
+ ZAE:0 "Zaraken Empire"
+ ZAR:0 "Zadrakata" 
+ ZK0:0 "Arsacid" 
+ ZK1:0 "Surena"
+ ZK2:0 "Kanarangiyan" 
+ ZK3:0 "Andarzaghid" 
+ ZK4:0 "Jushnas" 
+ ZK5:0 "Khosrow" 
+ ZK6:0 "Jadhuyah" 
+ ZK7:0 "Meshanid" 
+ ZK8:0 "Masmughan" 
+ ZK9:0 "Badhamid" 
+ VGK:0 "Vizdngoklakr"
+ UCT:0 "Uchiktudun Tukin"
+ AKS:0 "Aksãklakr"
+ TRH:0 "Trhnadunya"
+ DNY:0 "Duny" 
+ OKC:0 "Okonči"  
+ AVI:0 "Avit" 
+ HAZ:0 "The Hazarlars"  
+ DKK:0 "Du Kerkind" 
+ GT1:0 "Kurykan" 
+ GT2:0 "Gōkumm Tukin"  
+#Orcs
+ ORC:0 "Uccad"
+ #bhaxnmrectem & Esquelian
+ ET0:0 "Ammše" 
+ ET1:0 "Gempebbha"  
+ ET2:0 "Nektetbəχdkʼek"  
+ ET3:0 "Ebdek"   
+ ET4:0 "Bšatek"  
+ ET5:0 "Akadəxdep"  
+ ET6:0 "Mχatdəχte" 
+ ET7:0 "Datkšetpəkʼ" 
+ ET8:0 "Mebakəja"  
+ ET9:0 "Χamatnəkʼpatg"   
+ EK0:0 "Amgpep"  
+ EK1:0 "Pabeggbam"   
+ EK2:0 "Bankəh" 
+ EK3:0 "Amčamdjak" 
+ EK4:0 "Padbtaməhtʼan"  
+ EK5:0 "Managəč"  
+ EK6:0 "Enbəčxapdmam"  
+ EK7:0 "Abtbat" 
+ EK8:0 "Betkəkʼdabəχ"  
+ EQ0:0 "Arquiportua"  
+ EQ1:0 "Gortorque"  
+ EQ2:0 "Bastique"  
+ EQ3:0 "Erenuque"  
+ EQ4:0 "Zalant" 
+ EQ5:0 "Pambilique"  
+ EQ6:0 "Eiquebar"  
+ EQ7:0 "Varnare"  
+ EQ8:0 "Baijbas"  
+ EQ9:0 "Guernique"  
+ EV0:0 "Estadoa"  
+ EV1:0 "Kostantzio"  
+ EV2:0 "Dolkiti" 
+ EV3:0 "Belerofonte"  
+ #Karsk
+ ZT0:0 "Tabpapñgūñ"  
+ ZT1:0 "Dūnttūbñūk"  
+ ZT2:0 "Kepñedič"  
+ ZT3:0 "Gūnəχtñut"  
+ ZT4:0 "Būtmagñka"  
+ ZT5:0 "Paknəjñop"  
+ ZT6:0 "Nebda"  
+ ZT7:0 "Ñūkkdup"  
+ ZT8:0 "Monkugnəh"  
+ ZT9:0 "Tōkpan"  
+ ZN0:0 "Mogixñam"  
+ ZN1:0 "kōkmgdo"  
+ #Navshodia 
+ #Lechian  
+ ZC6:0 "Malolechowie"
+ ZC5:0 "Sródkrajanie"
+ ZC4:0 "Nadredzianie"
+ RDZ:0 "Redzianie"
+ POL:0 "Wielkolechowie"
+ PZK:0 "Przykrainianie"
+ ZHV:0 "Zyhovie"
+ ZC7:0 "Morahovie"
+ ZC8:0 "Bracslavianie"
+ ZC1:0 "Trywianie"
+ ZC2:0 "Wielinianie"
+ ZC3:0 "Dolinianie"
+ ZC0:0 "Opalowianie"
+ PT8:0 "Kólrysanie"
+ PT7:0 "Pódrysanie"
+ PT2:0 "Zemowie"
+ PT0:0 "Wiaaldzi Pomoranie"
+ PT1:0 "Daleczomorzanie"
+ PT4:0 "Dziewiannie"
+ PT5:0 "Gardowie"
+ PT3:0 "Dobrodzianie"
+ PT6:0 "Cwardowie"
+ NDJ:0 "Nadobrojezdowie"  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

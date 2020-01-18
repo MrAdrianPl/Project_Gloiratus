@@ -1,0 +1,356 @@
+﻿namespace = parliment_events
+#remove dead char
+parliment_events.1 = {
+	type = country_event
+	hidden = yes
+	
+	trigger = {
+	OR = { 
+	
+	
+	
+	AND = {	any_character = { AND = { is_alive = no this = root.var:right_seat_controler  } } has_variable = right_seat_controler }
+	AND = { any_character = { AND = { is_alive = no this = root.var:middle_seat_controler } } has_variable = middle_seat_controler }
+	AND = { any_character = { AND = { is_alive = no this = root.var:left_seat_controler } } has_variable = left_seat_controler }
+	AND = { any_character = { AND = { is_alive = no this = root.var:royal_guardian } } has_variable = royal_guardian }
+	}
+
+
+	}
+	immediate = {  
+
+	if = { limit = { any_character = { is_alive = no this = root.var:right_seat_controler } has_variable = right_seat_controler }
+	remove_variable = right_seat_controler
+	remove_variable = marshal_noble
+	remove_country_modifier = loyal_marshal_modifier
+	remove_country_modifier = disloyal_marshal_modifier
+	}
+	if = { limit = { any_character = { is_alive = no this = root.var:middle_seat_controler } has_variable = middle_seat_controler }
+	remove_variable = middle_seat_controler 
+	remove_variable = chancellor_noble
+	remove_country_modifier = loyal_chancellor_modifier
+	remove_country_modifier = disloyal_chancellor_modifier
+	}
+	if = { limit = { any_character = { is_alive = no this = root.var:left_seat_controler } has_variable = left_seat_controler  }
+	remove_variable = left_seat_controler
+	remove_variable = religious_chaplain
+	remove_country_modifier = loyal_religious_advisor
+	remove_country_modifier = disloyal_religious_advisor
+	}
+	if = { limit = { any_character = { is_alive = no this = root.var:royal_guardian }  has_variable = royal_guardian }
+	remove_variable = royal_guardian 
+	
+	}
+	
+	}
+
+	
+	
+}
+
+
+#changinig modifier
+
+parliment_events.3 = {
+	type = country_event
+	hidden = yes
+	
+	trigger = {
+	
+	OR = {
+	
+	AND = {
+	has_variable = left_seat_controler
+	any_character = {  
+	this = root.var:left_seat_controler loyalty > 50 
+	}
+	has_country_modifier = disloyal_religious_advisor
+	}
+	AND = {
+	has_variable = left_seat_controler
+	any_character = {  
+	this = root.var:left_seat_controler loyalty < 50 
+	}
+	has_country_modifier = loyal_religious_advisor
+	}
+		
+	AND = {
+	has_variable = middle_seat_controler
+	any_character = {  
+	this = root.var:middle_seat_controler loyalty > 50 
+	}
+	has_country_modifier = disloyal_chancellor_modifier
+	}
+	AND = {
+	has_variable = middle_seat_controler
+	any_character = {  
+	this = root.var:middle_seat_controler loyalty < 50 
+	}
+	has_country_modifier = loyal_chancellor_modifier
+	}
+	
+	AND = {
+	has_variable = right_seat_controler
+	any_character = {  
+	this = root.var:right_seat_controler loyalty > 50 
+	}
+	has_country_modifier = disloyal_marshal_modifier
+	}
+	AND = {
+	has_variable = right_seat_controler
+	any_character = {  
+	this = root.var:right_seat_controler loyalty < 50 
+	}
+	has_country_modifier = loyal_marshal_modifier
+	
+	}	
+	
+	
+	
+	
+	
+	}
+
+	
+
+	
+	}
+	
+	immediate = {  
+	
+	if = { 
+	limit = {
+	has_variable = left_seat_controler
+	any_character = {  
+	this = root.var:left_seat_controler loyalty > 50 
+	}
+	has_country_modifier = disloyal_religious_advisor
+	}
+	remove_country_modifier = disloyal_religious_advisor
+	add_country_modifier = { name = loyal_religious_advisor duration = -1 }
+	}
+	if = { 
+	limit = {
+	has_variable = left_seat_controler
+	any_character = {  
+	this = root.var:left_seat_controler loyalty < 50 
+	}
+	has_country_modifier = loyal_religious_advisor
+	}
+	remove_country_modifier = loyal_religious_advisor
+	add_country_modifier = { name = disloyal_religious_advisor duration = -1 }
+	}
+	if = { 
+	limit = {
+	has_variable = middle_seat_controler
+	any_character = {  
+	this = root.var:middle_seat_controler loyalty > 50 
+	}
+	has_country_modifier = disloyal_chancellor_modifier
+	}
+	remove_country_modifier = disloyal_chancellor_modifier
+	add_country_modifier = { name = loyal_chancellor_modifier duration = -1 }
+	}
+	if = { 
+	limit = {
+	has_variable = middle_seat_controler
+	any_character = {  
+	this = root.var:middle_seat_controler loyalty < 50 
+	}
+	has_country_modifier = loyal_chancellor_modifier
+	}
+	remove_country_modifier = loyal_chancellor_modifier
+	add_country_modifier = { name = disloyal_chancellor_modifier duration = -1 }
+	}	
+	if = { 
+	limit = { 
+	has_variable = right_seat_controler
+	any_character = {  
+	this = root.var:right_seat_controler loyalty > 50 
+	}
+	has_country_modifier = disloyal_chancellor_modifier
+	}
+	remove_country_modifier = disloyal_chancellor_modifier
+	add_country_modifier = { name = loyal_chancellor_modifier duration = -1 }
+	}
+	if = { 
+	
+	limit = { 
+	has_variable = right_seat_controler
+	any_character = {  
+	this = root.var:right_seat_controler loyalty < 50 
+	}
+	has_country_modifier = loyal_chancellor_modifier
+	}
+	remove_country_modifier = loyal_chancellor_modifier
+	add_country_modifier = { name = disloyal_chancellor_modifier duration = -1 }
+	}	
+	
+	
+	
+	}
+
+	
+	
+}
+
+#remove unproper modifiers
+ parliment_events.4 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+	
+	any_character = {
+
+	OR = {
+	AND = { ROOT = { has_variable = left_seat_controler } NOT = { this = root.var:left_seat_controler } } 
+	AND = { ROOT = { has_variable = middle_seat_controler } NOT = { this = root.var:middle_seat_controler } } 
+	AND = { ROOT = { has_variable = right_seat_controler } NOT = { this = root.var:right_seat_controler } } 
+	}
+	OR = { has_variable = gloryhound_advisor has_variable = loyalist_advisor has_variable = warmonger_advisor has_variable = zelot_advisor has_variable = peacefull_advisor has_variable = indostrious_advisor }
+
+	}
+	
+	
+	}
+
+	immediate = {
+	
+	every_character = {
+	limit = {
+	OR = {
+	AND = { ROOT = { has_variable = left_seat_controler } NOT = { this = root.var:left_seat_controler } } 
+	AND = { ROOT = { has_variable = middle_seat_controler } NOT = { this = root.var:middle_seat_controler } } 
+	AND = { ROOT = { has_variable = right_seat_controler } NOT = { this = root.var:right_seat_controler } } 
+	}
+	OR = { has_variable = gloryhound_advisor has_variable = loyalist_advisor has_variable = warmonger_advisor has_variable = zelot_advisor has_variable = peacefull_advisor has_variable = indostrious_advisor }
+	}
+	remove_variable = gloryhound_advisor remove_variable = loyalist_advisor remove_variable = warmonger_advisor remove_variable = zelot_advisor remove_variable = peacefull_advisor remove_variable = indostrious_advisor
+	}
+	
+	
+	
+	}
+
+	
+	
+}
+
+
+
+
+
+#change loyalty
+
+parliment_events.7 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+	any_character = { has_any_advisor_atittude = yes }
+
+	
+	
+	
+	
+	}
+
+	immediate = {
+################
+###gloryhound###
+################
+	every_character = {
+	limit = {
+	has_variable = gloryhound_advisor
+	}
+	
+	if = { 
+	limit = {
+	
+	} 
+	
+	add_loyalty = 5
+	}
+	
+	
+	}
+	
+	
+	
+################
+####loyalist####
+################
+	every_character = {
+	limit = {
+	has_variable = loyalist_advisor
+	}
+	#stable gain of loyalty
+	if = { 
+	limit = {
+	 root.tyranny < 2.5
+	}  
+	
+	add_loyalty = 2.5
+	}
+	#oppose tyrrany even beeing loyalist
+	if = { 
+	limit = {
+	root.tyranny > 10
+	}  
+	
+	add_loyalty = -5
+	}
+	#supports good seen rulers
+	if = { 
+	limit = {
+	root.current_ruler = { popularity > 50 }
+	}  
+	
+	add_loyalty = 2.5
+	}
+	#are displeased by negative stability
+	if = { 
+	limit = {
+	root.stability < 0
+	}  
+	
+	add_loyalty = -2.5
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}	
+	
+	
+
+
+
+
+}
+
+	
+	
+}
+
+
+
+parliment_events.10 = {
+	type = country_event
+	
+	trigger = {
+	
+	}
+
+	option = {
+	
+	
+	}
+
+	
+	
+}
+

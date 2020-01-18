@@ -1,0 +1,1358 @@
+window = {
+	gfxtype = windowgfx
+	name = "religion_view"
+	parentanchor = top|left
+	size = { 900 900 }
+	position = { 5 120 }
+	widgetanchor = top|left
+	movable = no
+	
+	widget = {
+		name = "background"
+		using = Large_window_type
+		size = { 100% 100% }
+		alwaystransparent = yes
+		
+		blockoverride "header"
+		{
+			text = "religion_name_header"
+			tooltip = "[ReligionView.GetPlayer.GetReligion.GetTooltip]"
+		}
+	}
+	icon = {
+		datacontext = "[GetScriptedGui('wheel_of_society_is_shown')]"
+		visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+		texture = "gfx/interface/buttons/society_wheel/background.dds"
+		spriteType = stretched
+		size = { 980 958 }
+		shaderfile = "gfx/FX/pdxgui_default.shader"
+		position = { -35 -58 }
+	}
+	
+	square_close_button = {
+		name = "close_button"
+		position = { -12 12 }
+		parentanchor = top|right
+		shortcut = "close_window"
+		onclick = "[ReligionView.OnClose]"
+		tooltip = "CLOSE"
+	}
+	
+	left_arrow_button = {
+		name = "previous_button"
+		position = { 130 14 }
+		parentanchor = top|left
+		shortcut = "previous_window"
+		onclick = "[ReligionView.OnPrevious]"
+		tooltip = "PREVIOUS_RELIGION_VIEW"
+	}
+	
+	button = {
+		
+		datacontext = "[GetScriptedGui('show_wheel_of_society')]"
+		position = { 812 60 }
+		size = { 42 42 }
+		visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+		enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+		tooltip = "SHOW_WHEEL"
+		texture = "gfx/interface/buttons/button_right_arrow.dds"
+		clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+		oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+	}
+	
+	container = {
+		datacontext = "[GetScriptedGui('wheel_of_society_is_shown')]"
+		visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End ))]"
+		
+		
+		flowcontainer = {
+			position = { 100 70 }
+			
+			button = {
+				name = "stab_the_pig"
+				texture = "gfx/interface/religion/button_sacrifice.dds"
+				enabled = "[ReligionView.GetPlayer.CanBoostStability]"
+				onclick = "[ReligionView.StabThePig]"
+				clicksound = "event:/SFX/UI/Actions/sfx_ui_action_sacrifice"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+				tooltip = "[ReligionView.GetPlayer.GetBoostStabilityReason]"
+				position = { 0 0 }
+			}
+			
+			container = {
+				tooltip = "[ReligionView.GetPlayer.GetStabilityTooltipPlayer]"
+				
+				icon = {
+					using = icon_stability
+					size = { 48 48 }
+					parentanchor = vcenter
+					position = { 0 0 }
+				}
+				
+				icon = {
+					name = "frame"
+					position = { 48 8 }
+					texture = "gfx/interface/tiles/list_slot_corner_tiles.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 28 20 }
+					size = { 150 34 }
+				}
+				
+				textbox = {
+					position = { 24 10 }
+					autoresize = yes
+					using = MarbleButtonFont
+					text = "[ReligionView.GetPlayer.GetStability]"
+					parentanchor = top|hcenter
+				}
+			}
+			
+			widget = {size = { 12 12 }}
+			
+			container = {
+				tooltip = "[ReligionView.GetPlayer.GetModifierTooltip('global_unrest')]"
+				
+				icon = {
+					using = icon_unrest
+					size = { 48 48 }
+					parentanchor = vcenter
+				}
+				
+				icon = {
+					name = "frame"
+					position = { 48 8 }
+					texture = "gfx/interface/tiles/list_slot_corner_tiles.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 28 20 }
+					size = { 150 34 }
+				
+				}
+				
+				textbox = {
+					position = { 24 10 }
+					autoresize = yes
+					using = MarbleButtonFont
+					text = "[ReligionView.GetPlayer.GetModifierValue('global_unrest')]"
+					parentanchor = top|hcenter
+				}
+			}
+			
+			widget = {size = { 5 5 }}
+			
+			container = {
+				tooltip = "RELIGIOUS_UNITY_IN_RELVIEW"
+				
+				icon = {
+					texture = "gfx/interface/icons/shared_icons/province_religion.dds"
+					size = { 48 48 }
+					parentanchor = vcenter
+					position = { 0 0 }
+				}
+				
+				icon = {
+					name = "frame"
+					position = { 48 8 }
+					texture = "gfx/interface/tiles/list_slot_corner_tiles.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 28 20 }
+					size = { 150 34 }
+				}
+				
+				textbox = {
+					position = { 24 10 }
+					autoresize = yes
+					using = MarbleButtonFont
+					text = "[ReligionView.GetPlayer.GetReligiousUnity|%]"
+					parentanchor = top|hcenter
+				}
+			}
+		}
+		
+		flowcontainer = {
+			position = { 100 118 }
+			
+			button = {
+				widgetanchor = left|vcenter
+				parentanchor = left|vcenter
+				texture = "gfx/interface/religion/button_invoke_devotio.dds"
+				enabled = "[ReligionView.CanReduceWarExhaustion]"
+				onclick = "[ReligionView.ReduceWarExhaustion]"
+				clicksound = "event:/SFX/UI/Actions/sfx_ui_action_invoke_devotio"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+				tooltip = "[ReligionView.GetReduceWarExhaustionTooltip]"
+			}
+			
+			container = {
+				widgetanchor = left|vcenter
+				parentanchor = left|vcenter
+				alpha_recursive = "[TransparentIfZero(ReligionView.GetPlayer.GetWarExhaustion)]"
+				
+				icon = {
+					name = "frame"
+					position = { 2 0 }
+					size = { 172 35 }
+					texture = "gfx/interface/tiles/yellow_bar_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 16 0 }
+				}
+				
+				progressbar = {
+					using = progress_bar_yellow_buildings
+					size = { 170 30 }
+					position = { 3 2 }
+					value = "[ReligionView.GetWarExhaustionPercentage]"
+					tooltip = "[ReligionView.GetWarExhaustionTooltip]"
+				}
+				
+				textbox = {
+					using = MarbleButtonFontM
+					text = "[ReligionView.GetPlayer.GetWarExhaustion]"
+					parentanchor = vcenter|hcenter
+					autoresize = yes
+					align = hcenter|nobaseline
+				}
+			}
+			
+			widget = {
+				name = "spacing_widget"
+				size = { 3 3 }
+			}
+			
+			icon = {
+				alpha_recursive = "[TransparentIfZero(ReligionView.GetPlayer.GetWarExhaustion)]"
+				texture = "gfx/interface/arrows_strip.dds"
+				framesize = { 50 50 }
+				size = { 36 36 }
+				frame = "[ReligionView.GetWarExhaustionChangeFrame]"
+				tooltip = "[ReligionView.GetWarExhaustionChangeTooltip]"
+				parentanchor = vcenter
+				position = { 237 -1 }
+			}
+		}
+		
+		flowcontainer = {
+			position = { 362 117 }
+			spacing = 5
+			container = {
+				tooltip = "[ReligionView.GetPlayer.GetModifierTooltip('omen_power')]"
+				
+				icon = {
+					texture = "gfx/interface/icons/shared_icons/omen.dds"
+					size = { 48 48 }
+				}
+				
+				icon = {
+					name = "frame"
+					position = { 48 8 }
+					texture = "gfx/interface/tiles/list_slot_corner_tiles.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 28 20 }
+					size = { 150 34 }
+				}
+				
+				textbox = {
+					position = { 24 10 }
+					autoresize = yes
+					using = MarbleButtonFont
+					text = "[ReligionView.GetPlayer.GetModifierValue('omen_power')]"
+					parentanchor = top|hcenter
+				}
+			}
+			
+			container = {
+				tooltip = "[ReligionView.GetPlayer.GetModifierTooltip('omen_duration')]"
+				
+				icon = {
+					position = { 0 -1 }
+					texture = "gfx/interface/icons/modifiers/omen_duration.dds"
+					size = { 48 48 }
+				}
+				
+				
+				icon = {
+					name = "frame"
+					position = { 48 8 }
+					texture = "gfx/interface/tiles/list_slot_corner_tiles.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 28 20 }
+					size = { 150 34 }
+				}
+				
+				textbox = {
+					position = { 24 10 }
+					autoresize = yes
+					using = MarbleButtonFont
+					text = "[ReligionView.GetPlayer.GetModifierValue('omen_duration')]"
+					parentanchor = top|hcenter
+				}
+			}
+		}
+		
+		################################
+		# Omens
+		################################
+		container = {
+			position = { 44 168 }
+			
+			DefaultHeaderBackground = {
+				name = "Omens_list_header"
+				size = { 810 46 }
+				visible = "[Not(ReligionView.GetPlayer.HasActiveOmen)]"
+				
+				blockoverride "text"
+				{
+					parentanchor = top|hcenter
+					text = "OMENS"
+					tooltip = "OMENS_TT"
+					position = { 0 6 }
+				}
+			}
+			
+			dynamicgridbox = {
+				name = "omens_grid"
+				position = { 0 46 }
+				visible = "[Not(ReligionView.GetPlayer.HasActiveOmen)]"
+				datamodel_wrap = 4
+				datamodel = "[ReligionView.GetOmens]"
+				
+				container = {
+					position = { 0 -6 }
+					
+					icon = {
+						name = "vertical_divider"
+						position = { 351 0 }
+						texture = "gfx/interface/tiles/vertical_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 0 10 }
+						size = { 6 673 }
+					}
+					
+					icon = {
+						name = "horizontal_divider_2"
+						position = { 4 144 }
+						texture = "gfx/interface/tiles/horizontal_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 10 1 }
+						size = { 350 6 }
+					}
+					
+					icon = {
+						name = "horizontal_divider_1"
+						position = { 355 144 }
+						texture = "gfx/interface/tiles/horizontal_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 10 1 }
+						size = { 428 6 }
+					}
+					
+					icon = {
+						name = "horizontal_divider_4"
+						position = { 4 320 }
+						texture = "gfx/interface/tiles/horizontal_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 10 1 }
+						size = { 350 6 }
+					}
+					
+					icon = {
+						name = "horizontal_divider_3"
+						position = { 355 320 }
+						texture = "gfx/interface/tiles/horizontal_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 10 1 }
+						size = { 428 6 }
+					}
+					
+					icon = {
+						name = "horizontal_divider_5"
+						position = { 4 485 }
+						texture = "gfx/interface/tiles/horizontal_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 10 1 }
+						size = { 350 6 }
+					}
+					
+					icon = {
+						name = "horizontal_divider_6"
+						position = { 356 485 }
+						texture = "gfx/interface/tiles/horizontal_divider.dds"
+						spriteType = corneredtiled
+						spriteborder = { 10 1 }
+						size = { 428 6 }
+					}
+				
+				}
+				
+				item = {
+					widget = {
+						size = { 400 166 }
+						
+						icon = {
+							texture = "[GetOmenIcon(OmenItem.GetOmen)]"
+							tooltip = "[OmenItem.GetFlavor]"
+							size = { 300 76 }
+							alpha = 0.8
+						}
+						
+						widget = {
+							name = "Spacing_widget"
+							position = { 0 132 }
+							size = { 4 4 }
+						}
+						
+						textbox = {
+							position = { 8 103 }
+							using = MarbleButtonFontS
+							text = "[OmenItem.GetDesc]"
+							size = { 290 28 }
+							align = center
+						}
+						
+						button_standard_white_marble = {
+							position = { 4 64 }
+							text = "[OmenItem.GetName|B]"
+							enabled = "[OmenItem.CanInvoke]"
+							onclick = "[OmenItem.Invoke]"
+							clicksound = "event:/SFX/UI/Actions/sfx_ui_action_invoke_omen"
+							oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+							tooltip = "[OmenItem.GetInvokeReason]"
+							size = { 296 46 }
+						}
+					}
+				}
+			}
+			
+			widget = {
+				visible = "[ReligionView.GetPlayer.HasActiveOmen]"
+				size = { 608 350 }
+				
+				icon = {
+					name = "type_icon"
+					position = { 42 50 }
+					texture = "[GetOmenIconBig(ReligionView.GetPlayer.GetActiveOmen)]"
+					tooltip = "[ReligionView.GetPlayer.GetActiveOmen.GetDesc]"
+					size = { 900 326 }
+					scale = 0.8
+				}
+				
+				DefaultHeaderBackground = {
+					name = "name"
+					size = { 810 46 }
+					
+					blockoverride "text"
+					{
+						parentanchor = top|hcenter
+						text = "[ReligionView.GetPlayer.GetActiveOmen.GetName]"
+						position = { 0 8 }
+					}
+				}
+				
+				textbox = {
+					name = "desc"
+					position = { 100 320 }
+					size = { 608 40 }
+					using = MarbleButtonFontM
+					text = "[ReligionView.GetPlayer.GetActiveOmen.GetEffect]"
+					align = top|hcenter
+				}
+				
+				icon = {
+					name = "frame"
+					position = { 300 365 }
+					size = { 195 35 }
+					texture = "gfx/interface/tiles/yellow_bar_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 16 0 }
+				}
+				
+				progressbar = {
+					using = progress_bar_yellow_buildings
+					size = { 190 30 }
+					position = { 302 367 }
+					value = "[ReligionView.GetPlayer.GetActiveOmenDuration]"
+					tooltip = "[ReligionView.GetPlayer.GetActiveOmenDurationInfo]"
+				}
+			}
+		}
+		
+		textbox = {
+			position = { -40 173 }
+			parentanchor = right|top
+			widgetanchor = right|top
+			tooltip = "[ReligionView.GetPlayer.GetPriceTooltip('call_omen')]"
+			autoresize = yes
+			using = MarbleButtonFont
+			text = "[ReligionView.GetPlayer.GetPrice('call_omen')]"
+			fontcolor = { 1 1 1 1 }
+		}
+	}
+	container = {
+		datacontext = "[GetScriptedGui('wheel_of_society_is_shown')]"
+		visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+		position = { 0 0 }
+		
+		
+		icon = {
+			texture = "gfx/interface/buttons/society_wheel/wheel_frame_outer.dds"
+			size = { 850 850 }
+			position = { 28 54 }
+		
+		}
+		icon = {
+			texture = "gfx/interface/buttons/society_wheel/middle_ring.dds"
+			size = { 310 310 }
+			position = { 298 338 }
+		
+		}
+		icon = {
+			texture = "gfx/interface/buttons/society_wheel/wheel_frame_inner.dds"
+			size = { 225 225 }
+			position = { 347 379 }
+		
+		}
+		container = {
+			position = { 43 818 }
+			icon = {
+				texture = "gfx/interface/bg/law_entry_scroll_bg.dds"
+				size = { 250 50 }
+				position = { 0 0 }
+			
+			
+			}
+			textbox = {
+				position = { 60 13 }
+				autoresize = yes
+				using = MarbleButtonFont
+				datacontext = "[GetScriptedGui('society_points_counter')]"
+				text = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				fontcolor = { 0 0 0 1 }
+				align = center
+			}
+		}
+		
+		
+		container = {
+			position = { 536 445 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_might_1')]"
+				position = { 0 0 }
+				size = { 60 60 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "MIGHT_STARTER"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_might_2')]"
+				position = { 13 67 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "MIGHT_STARTER_RIDERS"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wisdom_1')]"
+			position = { 309 446 }
+			size = { 60 60 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "WISDOM_STARTER"
+			texture = "gfx/interface/buttons/society_wheel/button_blue.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		container = {
+			position = { 178 518 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_arcane_1')]"
+				position = { 50 6 }
+				size = { 48 48 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "ARCANE_WAYS"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_arcane_2')]"
+				position = { 6 29 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SHOW_WHEEL"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		container = {
+			position = { 177 366 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_rationalism_1')]"
+				position = { 45 25 }
+				size = { 48 48 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "RATIONALIST_WAYS"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_rationalism_2')]"
+				position = { 2 21 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "RATIONALIST_WAYS_UP"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_exalted')]"
+			position = { 279 651 }
+			size = { 48 48 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "EXALTED"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		container = {
+			position = { 653 484 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_melavolence_1')]"
+				position = { 1 22 }
+				size = { 48 48 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "CRAVING_FOR_ADV"
+				texture = "gfx/interface/buttons/society_wheel/button_purple.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_melavolence_2')]"
+				position = { 55 91 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "BACK_STABING"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_melavolence_3')]"
+				position = { 73 18 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "WEB_OF_CONTROL"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		container = {
+			position = { 648 309 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_honour_1')]"
+				position = { 4 90 }
+				size = { 48 48 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "RIGHTOUS"
+				texture = "gfx/interface/buttons/society_wheel/button_golden.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_honour_2')]"
+				position = { 84 109 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "ETHOS_OF_CHIV"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_honour_3')]"
+				position = { 55 40 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "PROTECTOR_OF_WEAK"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_powerful_control')]"
+			position = { 584 655 }
+			size = { 48 48 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "POWERFUL_CONTROL"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_highness_society')]"
+			position = { 512 699 }
+			size = { 48 48 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "HIGHNESS_SOCIETY"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_loyal_to_nation')]"
+			position = { 348 696 }
+			size = { 48 48 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "FITTING_FOR_THE_RULE"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wealth_1')]"
+			position = { 422 340 }
+			size = { 60 60 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "WEALTH_STARTER"
+			texture = "gfx/interface/buttons/society_wheel/button_yellow.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_way_of_life')]"
+			position = { 422 579 }
+			size = { 60 60 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "WAY_OF_LIFE_STARTER"
+			texture = "gfx/interface/buttons/society_wheel/button_green.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		container = {
+			position = { 302 165 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_elites_1')]"
+				position = { 59 75 }
+				size = { 48 48 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "ELITES"
+				texture = "gfx/interface/buttons/society_wheel/button_golden.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_elites_2')]"
+				position = { 86 4 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SHOW_WHEEL"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_elites_3')]"
+				position = { 4 35 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SHOW_WHEEL"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		container = {
+			position = { 472 166 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_communities_1')]"
+				position = { 29 67 }
+				size = { 48 48 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "COMMUNITIES"
+				texture = "gfx/interface/buttons/society_wheel/button_bright_blue.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_communities_2')]"
+				position = { 99 30 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SHOW_WHEEL"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_communities_3')]"
+				position = { 6 5 }
+				size = { 32 32 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SHOW_WHEEL"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_might_4')]"
+			
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "WRATH_SOCIETY"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			position = { 610 457 }
+		}
+		
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_zeal_1')]"
+			position = { 706 251 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "DEUS_VULT"
+			texture = "gfx/interface/buttons/society_wheel/button_golden.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_zeal_2')]"
+			position = { 748 310 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "HOLLY_KNIGHTS"
+			texture = "gfx/interface/buttons/society_wheel/button_golden.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_might_5')]"
+			position = { 578 566 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "RUTHLESSNES_SOCIETY"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_might_3')]"
+			position = { 565 362 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "FOR_THE_VICTORY"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_doubtful')]"
+			position = { 493 627 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "DEFIANT"
+			texture = "gfx/interface/buttons/society_wheel/button_purple.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_faithful')]"
+			position = { 376 622 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "FAITHFUL"
+			texture = "gfx/interface/buttons/society_wheel/button_bright_blue.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wisdom_2')]"
+			position = { 294 564 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "MAGICAL_SENSING_SOC"
+			texture = "gfx/interface/buttons/society_wheel/button_blue.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wisdom_3')]"
+			position = { 260 458 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "THE_TRUTH_FORETOLD"
+			texture = "gfx/interface/buttons/society_wheel/button_blue.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wisdom_4')]"
+			position = { 296 358 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "PEACE_IN_PACE"
+			texture = "gfx/interface/buttons/society_wheel/button_blue.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wealth_2')]"
+			position = { 383 304 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "LANDHOLDING_SOCIETY"
+			texture = "gfx/interface/buttons/society_wheel/button_yellow.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wealth_3')]"
+			position = { 432 230 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "MERCHANT_VENTURES"
+			texture = "gfx/interface/buttons/society_wheel/button_yellow.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_wealth_4')]"
+			position = { 483 304 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "ECONOMICAL_SWIFTNESS"
+			texture = "gfx/interface/buttons/society_wheel/button_yellow.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_deffiance_2')]"
+			position = { 710 659 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "NATION_MANIPULATOR"
+			texture = "gfx/interface/buttons/society_wheel/button_purple.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_deffiance_1')]"
+			position = { 752 597 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "DOUBLE_DEALING"
+			texture = "gfx/interface/buttons/society_wheel/button_purple.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_glory_2')]"
+			position = { 772 505 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "ADVENTURERS_KNIGHTS"
+			texture = "gfx/interface/buttons/society_wheel/button_yellow.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_glory_1')]"
+			position = { 776 403 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "GLORY_SEEKERS"
+			texture = "gfx/interface/buttons/society_wheel/button_yellow.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_republicanism_1')]"
+			position = { 544 135 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "REPUBLIC_SOCIETY"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_loyal_to_kindful')]"
+			position = { 327 780 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "KINDFUL"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_absolute')]"
+			position = { 540 783 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "ABSOLUTE"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_dreadful')]"
+			position = { 649 727 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "DREAD"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		container = {
+			position = { 135 290 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_inventionsim_1')]"
+				position = { 0 -2 }
+				size = { 40 40 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "INVENTIONISM"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_inventionsim_2')]"
+				position = { 27 30 }
+				size = { 24 24 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "INVENTIONISM_UP"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		container = {
+			position = { 93 413 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_misticism_1')]"
+				position = { 0 -2 }
+				size = { 40 40 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "MISTICISM"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_misticism_2')]"
+				position = { 27 30 }
+				size = { 24 24 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "MISTICISM_UP"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		container = {
+			position = { 106 561 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_spellcraft_1')]"
+				position = { 0 -2 }
+				size = { 40 40 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SPELLCRAFT"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_spellcraft_2')]"
+				position = { 27 30 }
+				size = { 24 24 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "SPELLCRAFT_UP"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_ascended_to_throne')]"
+			position = { 212 716 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "ASCENDED_TO_THRONE"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		container = {
+			position = { 320 137 }
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_monarchism_1')]"
+				position = { 0 0 }
+				size = { 40 40 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "MONARCHIST_SOCIETY"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+			button = {
+				datacontext = "[GetScriptedGui('wheel_of_society_monarchism_2')]"
+				position = { 27 30 }
+				size = { 24 24 }
+				visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+				tooltip = "MONARCHIST_SOCIETY_HONOROUS"
+				texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_3.dds"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+			}
+		}
+		
+		
+		button = {
+			datacontext = "[GetScriptedGui('wheel_of_society_oligarchism_1')]"
+			position = { 434 117 }
+			size = { 40 40 }
+			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ReligionView.GetPlayer.MakeScope ).End )]"
+			tooltip = "OLIGARCHIC_RULE"
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_2.dds"
+			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_sub_tab"
+			oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+		}
+		
+		
+		icon = {
+			texture = "gfx/interface/buttons/society_wheel/button 5.dds"
+			size = { 100 100 }
+			position = { 72 -9 }
+			tooltip = "DESTINY_TEXT"
+			alwaystransparent = no
+		}
+		icon = {
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_1.dds"
+			size = { 115 115 }
+			position = { 397 432 }
+			tooltip = "ORGIN_TEXT"
+		}
+		icon = {
+			texture = "gfx/interface/buttons/society_wheel/society_wheel_bt_4.dds"
+			size = { 100 100 }
+			position = { 754 760 }
+			tooltip = "NATURE_TEXT"
+		}
+	
+	
+	}
+
+}

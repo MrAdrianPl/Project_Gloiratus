@@ -1,0 +1,768 @@
+﻿#generic character values
+
+tyranny_level_events = 10 #Tyranny level for tyranny-specific event options
+
+corruption_svalue = {
+	value = 0	
+	add = root.corruption
+}
+
+corruption_svalue_halved = {
+	value = 0	
+	subtract = root.corruption
+	divide = 2
+}
+
+loyalty_svalue = {
+	value = 0	
+	add = root.loyalty
+}
+
+has_yearly_income_svalue = {
+	value = 0
+	add = root.has_monthly_income
+	multiply = 12
+}
+
+has_yearly_balance_svalue = {
+	value = 0
+	add = root.has_monthly_balance
+	multiply = 12
+}
+
+six_months_income_root = {
+	value = root.has_monthly_income
+	multiply = 6
+}
+
+six_months_income_root_ipg_14 = {
+	value = root.has_monthly_income
+	multiply = 6
+	max = 200
+}
+
+military_favor_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = military_favor
+			}
+		}
+		add = root.var:military_favor
+	}
+}
+
+civic_favor_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = civic_favor
+			}
+		}
+		add = root.var:civic_favor
+	}
+}
+
+mercantile_favor_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = mercantile_favor
+			}
+		}
+		add = root.var:mercantile_favor
+	}
+}
+
+religious_favor_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = religious_favor
+			}
+		}
+		add = root.var:religious_favor
+	}
+}
+
+populist_favor_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = populist_favor
+			}
+		}
+		add = root.var:populist_favor
+	}
+}
+
+party_support_small = 5
+party_support_large = 10
+
+subtract_party_support_small = -5
+subtract_party_support_large = -10
+
+military_senate_support_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = military_senate_support_variable
+			}
+		}
+		add = var:military_senate_support_variable
+	}
+	max = 20
+}
+
+civic_senate_support_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = civic_senate_support_variable
+			}
+		}
+		add = var:civic_senate_support_variable
+	}
+	max = 20
+}
+
+mercantile_senate_support_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = mercantile_senate_support_variable
+			}
+		}
+		add = var:mercantile_senate_support_variable
+	}
+	max = 20
+}
+
+religious_senate_support_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = religious_senate_support_variable
+			}
+		}
+		add = var:religious_senate_support_variable
+	}
+	max = 20
+}
+
+populist_senate_support_svalue = {
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_variable = populist_senate_support_variable
+			}
+		}
+		add = var:populist_senate_support_variable
+	}
+	max = 20
+}
+
+combined_stats_olympics_svalue = {
+	value = 0
+	add = martial
+	add = finesse
+	add = charisma
+	add = zeal
+}
+
+treatment_requirement_svalue = {
+	value = 0
+	add = scope:target.wealth
+	divide = 10
+	min = 100
+	max = 1000
+}
+
+treatment_price_svalue = {
+	value = 0
+	subtract = scope:target.wealth
+	divide = 10
+	min = -1000
+	max = -100
+}
+
+all_loyal_cohorts_svalue = {
+	value = 0
+	add = root.var:num_of_loyal_cohorts_total
+}
+
+half_all_loyal_cohorts_svalue = {
+	value = root.var:num_of_loyal_cohorts_total
+	divide = 2
+	min = 1
+}
+
+total_stats_svalue = {
+	value = 0
+	add = martial
+	add = finesse
+	add = zeal
+	add = charisma
+}
+
+high_value_city_svalue = 10
+
+warfare_1_loot_small_value = {
+	value = local_var:sieged_city.total_population
+	multiply = 2
+	max = 200
+}
+
+warfare_1_loot_medium_value = {
+	value = local_var:sieged_city.total_population
+	multiply = 3
+	max = 300
+}
+
+warfare_1_loot_large_value = {
+	value = local_var:sieged_city.total_population
+	multiply = 5
+	max = 400
+}
+
+warfare_1_loot_huge_value = {
+	value = local_var:sieged_city.total_population
+	multiply = 10
+	max = 500
+}
+
+slave_revolt_svalue = {
+	min = 10
+	value = total_population
+	subtract = num_of_slaves
+}
+
+slaves_defeated_svalue = {
+	value = 0
+	add = local_var:slaves_defeated
+	divide = 2
+	min = 2
+	max = 40
+	floor = yes
+}
+
+country_size_revolt_value = { #If you change this, change the next one too!
+	value = 15
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 40
+			}
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 80
+			}
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 120
+			}
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 160
+			}
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 200
+			}
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 240
+			}
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			commander.employer = {
+				num_of_cities >= 280
+			}
+		}
+		add = 3
+	}
+}
+
+country_size_revolt_value_tooltip = {
+	value = num_of_cohorts
+	multiply = 0.35
+	min = 5
+}
+
+three_years_income_svalue = {
+	value = has_monthly_income
+	multiply = 36
+}
+
+pop_friction_size_value = {
+	max = 5
+	value = total_population
+	divide = 4
+}
+
+province_pop_friction_size_svalue = {
+	value = 0
+	scope:pop_friction_enemy_province = {
+		if = {
+			limit = {
+				total_population > 3
+			}
+			add = { 
+				value = total_population
+				divide = 4
+				ceiling = yes
+			}
+		}
+	}
+}
+
+province_pop_friction_size_svalue_1 = {
+	value = 0
+	add = province_pop_friction_size_svalue
+	add = 1
+}
+
+num_yuezhi_provinces = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			dominant_province_culture = yuezhi
+		}
+		add = 1
+	}
+}
+
+num_non_yuezhi_provinces = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			NOT = {
+				dominant_province_culture = yuezhi
+			}
+		}
+		add = 1
+	}
+}
+
+num_of_first_family_members_svalue = {
+	value = 0
+	every_character = {
+		limit = { is_in_list = first_annex_family_list }
+		add = 1
+	}
+}
+
+num_of_second_family_members_svalue = {
+	value = 0
+	every_character = {
+		limit = { is_in_list = second_annex_family_list }
+		add = 1
+	}
+}
+
+num_of_third_family_members_svalue = {
+	value = 0
+	every_character = {
+		limit = { is_in_list = third_annex_family_list }
+		add = 1
+	}
+}
+
+num_of_fourth_family_members_svalue = {
+	value = 0
+	every_character = {
+		limit = { is_in_list = fourth_annex_family_list }
+		add = 1
+	}
+}
+
+country_size_revolt_value_family = { #If you change this, change the next one too!
+	value = root.employer.num_of_cohorts
+	multiply = 0.17
+	min = 2
+}
+
+country_size_revolt_value_family_tooltip = {
+	value = 15
+	if = {
+		limit = {
+			num_of_cities >= 40
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			num_of_cities >= 80
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			num_of_cities >= 120
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			num_of_cities >= 160
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			num_of_cities >= 200
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			num_of_cities >= 240
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			num_of_cities >= 280
+		}
+		add = 3
+	}
+}
+
+half_province_civ_svalue = {
+	value = 0
+	subtract = civilization_value
+	divide = 2
+}
+
+half_province_civ_svalue_pos = {
+	value = 0
+	add = civilization_value
+	divide = 2
+}
+
+gladiator_target_svalue = {
+	value = 0
+	add = scope:target.martial
+	add = {
+		value = 0
+		add = scope:target.finesse
+		min = 1
+		divide = 2
+	}
+	if = {
+		limit = {
+			scope:target = {
+				age >= 40
+			}
+		}
+		subtract = 2
+	}
+	if = {
+		limit = {
+			scope:target = {
+				age >= 50
+			}
+		}
+		subtract = 2
+	}
+	if = {
+		limit = {
+			scope:target = {
+				age >= 60
+			}
+		}
+		subtract = 2
+	}
+}
+
+gladiator_recipient_svalue = {
+	value = 0
+	add = scope:recipient.martial
+	add = {
+		value = 0
+		add = scope:recipient.finesse
+		min = 1
+		divide = 2
+	}
+	if = {
+		limit = {
+			scope:recipient = {
+				age >= 40
+			}
+		}
+		subtract = 2
+	}
+	if = {
+		limit = {
+			scope:recipient = {
+				age >= 50
+			}
+		}
+		subtract = 2
+	}
+	if = {
+		limit = {
+			scope:recipient = {
+				age >= 60
+			}
+		}
+		subtract = 2
+	}
+}
+
+gladiator_recipient_var_svalue = {
+	value = 0
+	add = local_var:combat_ability_recipient
+}
+
+title_importance_svalue = {
+	value = title_importance
+	divide = 4
+	min = 1
+}
+
+character_importance_svalue = {
+	value = 0
+	add = title_importance
+}
+
+calc_unit_size_svalue = {
+	value = 0
+	add = unit.unit_size
+	divide = 1.33
+}
+
+peculating_cash_svalue = {
+	value = 0
+	add = employer.has_monthly_income
+	multiply = 6
+}
+
+gender_balance_male_test_svalue = {
+	value = 0
+	every_country = {
+		every_character = {
+			limit = {
+				is_male = yes
+			}
+			add = 1
+		}
+	}
+}
+
+gender_balance_female_test_svalue = {
+	value = 0
+	every_country = {
+		every_character = {
+			limit = {
+				is_male = no
+			}
+			add = 1
+		}
+	}
+}
+
+slave_population_proportion_svalue = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			any_pops_in_province = {
+				pop_type = slaves
+			}
+		}
+		every_pops_in_province = {
+			limit = {
+				pop_type = slaves
+			}
+			add = 1
+		}
+	}
+}
+
+slave_proportion_total_population_svalue = {
+	value = country_population
+	divide = 10
+	multiply = 5
+}
+
+
+ip_republic_46_tooltip_svalue = {
+	value = 0
+	every_country_state = {
+		limit = {
+			any_state_province = {
+				count >= 7
+				NOT = {
+					dominant_province_culture = root.culture
+				}
+			}
+		}
+		add = 1
+	}
+}
+
+ip_republic_47_partial_army_svalue = {
+	value = 0
+	add = root.var:total_army_size_ip_republic_47
+	multiply = 2
+	subtract = 10
+	divide = 5
+}
+
+ip_republic_47_total_army_svalue = {
+	value = 0
+	add = root.var:total_army_size_ip_republic_47
+}
+
+ip_republic_47_iter_army_svalue = {
+	value = 0
+	add = scope:iter_army.unit_size
+	add = scope:iter_army_2.unit_size
+}
+
+10_percent_population_svalue = {
+	value = 0
+	add = total_population
+	divide = 10
+	multiply = 1
+}
+
+20_percent_power_base_country_svalue = {
+	value = 0
+	add = total_power_base
+	divide = 5
+}
+
+total_power_base_halved_svalue = {
+	value = total_power_base
+	divide = 2
+}
+
+mild_famine_relief_cost_svalue = {
+	value = root.has_monthly_income
+	multiply = -2.2
+}
+
+severe_famine_relief_cost_svalue = {
+	value = root.has_monthly_income
+	multiply = -3.5
+}
+
+fe_66_percent_food_svalue = {
+	value = var:fe_66_percent_food_var
+}
+
+fe_66_percent_buy_svalue = {
+	value = var:fe_66_percent_food_var
+	divide = 3
+}
+
+fe_famine_relocation_number_svalue = {
+	value = var:famine_relocation_number
+}
+
+cities_in_province_svalue = {
+	value = 0
+	if = {
+		limit = {
+			state = {
+				any_state_province = { has_city_status = yes }
+			}
+		}
+		state = {
+			every_state_province = {
+				limit = {
+					OR = {
+						has_city_status = yes
+						has_province_modifier = founding_city_in_progress
+					}
+				}
+				add = 10
+			}
+		}
+	}
+	min = 0
+}
+
+colonia_scope_population_svalue = {
+	value = 0
+	scope:colonia_scope = {
+		every_pops_in_province = {
+			add = 1
+		}
+	}
+}
+
+colonia_scope_20_percent_svalue = {
+	value = 0
+	scope:colonia_scope = {
+		every_pops_in_province = {
+			add = 1
+		}
+	}
+	divide = 5
+	add = 1
+	ceiling = yes
+}
+
+colonia_scope_eligible_population_svalue = {
+	value = 0
+	scope:colonia_scope = {
+		every_pops_in_province = {
+			limit = {
+				NOR = { 
+					pop_culture = roman 
+					pop_type = slaves
+					pop_type = tribesmen
+				}
+			}
+			add = 1
+		}
+	}
+}
+
+colonia_scope_eligible_population_percent_svalue = {
+	value = 0
+	add = colonia_scope_eligible_population_svalue
+	divide = colonia_scope_population_svalue
+	multiply = 100
+}
+
+
+ideal_family_size_svalue = {
+	value = num_of_expected_jobs
+	add = 1
+}

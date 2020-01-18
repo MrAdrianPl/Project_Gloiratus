@@ -1,0 +1,35 @@
+## Golden dwarves female clothes##
+
+
+
+## Golden dwarves male clothes##
+
+
+
+## Golden dwarves male Hairstyles##
+
+
+## Golden dwarves female Hairstyles##
+
+
+
+## Golden dwarves soldier Helmet##
+
+golden_dwarves_helmet_1 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "golden_dwarves_helmet_1_entity"  }
+}
+golden_dwarves_helmet_1_color2 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "golden_dwarves_helmet_1_color2_entity"  }
+}
+golden_dwarves_helmet_1_color3 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "golden_dwarves_helmet_1_color3_entity"  }
+}
+golden_dwarves_helmet_1_color4 = {
+	entity = { required_tags = ""					node = shared_pose_entity		entity = "golden_dwarves_helmet_1_color4_entity"  }
+}
+
+
+
+
+
+

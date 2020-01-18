@@ -1,0 +1,5 @@
+﻿biyearly_country_pulse = {
+	random_events = {
+		100 = 0
+	}
+}

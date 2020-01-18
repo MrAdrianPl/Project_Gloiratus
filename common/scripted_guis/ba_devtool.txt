@@ -1,0 +1,210 @@
+﻿ba_add_slaves_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = slaves
+	}
+}
+ba_kill_slaves_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = slaves
+			}
+			kill_pop = yes
+		}
+	}
+}
+ba_add_tribesmen_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = tribesmen
+	}
+}
+ba_kill_tribesmen_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = tribesmen
+			}
+			kill_pop = yes
+		}
+	}
+}
+ba_add_freemen_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = freemen
+	}
+}
+ba_kill_freemen_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = freemen
+			}
+			kill_pop = yes
+		}
+	}
+}
+ba_add_citizen_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = citizen
+	}
+}
+ba_kill_citizen_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = citizen
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+ba_add_serf_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = serfs
+	}
+}
+ba_kill_serf_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = serfs
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+ba_add_noble_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = tnoble
+	}
+}
+ba_kill_noble_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = tnoble
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+ba_add_aristocrat_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = taristocracy
+	}
+}
+ba_kill_aristocrat_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = taristocracy
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+ba_add_magican_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		create_pop = tmages
+	}
+}
+ba_kill_magican_button = {
+	scope = province
+
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		random_pops_in_province = {
+			limit = {
+				pop_type = tmages
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+
+
+
+
+
